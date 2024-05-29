@@ -8,7 +8,9 @@
     
 </head>
 <body>
-
+<div class="header">
+    <img src="/View/img/logo-senai2.png" alt="logo" style="position: absolute; top: 20px; left: 20px; width: 350px; background-color: rgba(99, 99, 99, 0.518);">
+</div>
     <div class="login-container">
         <h2>Login</h2>
         <p>Bem vindo ao Gestor Senai-SP</p>

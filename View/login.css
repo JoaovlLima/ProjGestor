@@ -5,8 +5,11 @@ body {
     height: 100vh;
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-}
+    background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p3/544300-circulo-vermelho-da-tecnologia-e-fundo-abstrato-da-informatica-negocios-e-conexao-conceito-futurista-e-industria-4-0-internet-cyber-e-tema-de-rede-vetor.jpg);
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position: center;
+}   
 
 .login-container {
   
