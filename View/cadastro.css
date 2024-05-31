@@ -1,0 +1,56 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(252, 212, 208);
+   
+}
+
+.cadastro-container {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    font-family: 'Montserrat', Roboto, sans-serif;
+    color: #6b6a6a;
+}
+
+.cadastro-container h2 {
+    margin-bottom: 20px;
+    text-align: left;
+    color: #e20814; /* Cor vermelha para o título */
+}
+
+.cadastro-container p {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.cadastro-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cadastro-container button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e20814; /* Cor vermelha para o botão */
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cadastro-container button:hover {
+    background-color: #0056b3; /* Cor azul quando hover */
+}

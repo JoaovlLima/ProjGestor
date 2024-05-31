@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.main_container {
+  padding: 20px;
+}
+
+.areaCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-sala {
+  font-size: 40px;
+  color: #555;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+.details p {
+  margin: 5px 0;
+  color: #333;
+}
