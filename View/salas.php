@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/View/sala.css">
 </head>
 <body>
-<?php include 'C:\Users\Joao Lima\Documents\DEV-SENAI\ProjGestor\View\hearderLateral.php' ?>
+<?php include 'hearderLateral.php' ?>
 <?=template_header('GestorHeader')?>
 
 <div class="main_container">

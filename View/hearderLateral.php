@@ -49,15 +49,19 @@ echo <<<EOT
               <span class="icon"><i class="fas fa-warehouse"></i></span>
               <span class="title">Patrimônios</span>
           </a></li>
-          <li><a href="#">
+          <li><a href="/View/estoque.php">
               <span class="icon"><i class="fas fa-boxes"></i></span>
               <span class="title">Estoque</span>
           </a></li>
-          
+          <li><a href="#" class="active">
+          <span class="icon"><i class="fas fa-tools icon"></i></span>
+          <span class="title">Manutenção</span>
+      </a></li>
           <li><a href="#" class="active">
               <span class="icon"><i class="fas fa-sign-in-alt"></i></span>
               <span class="title">Entrada</span>
           </a></li>
+  
           <li><a href="#">
               <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
               <span class="title">Saída</span>

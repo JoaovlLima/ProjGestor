@@ -1,0 +1,63 @@
+.main_container{
+ display: flex;
+ justify-content: center;
+}
+
+.container-estoque {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    
+}
+
+section {
+    margin-bottom: 20px;
+    
+}
+
+section h2 {
+    margin-top: 0;
+    color: #e20814;
+}
+
+section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+section table th, section table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+section table th {
+    background-color: #e20814;
+    color: white;
+}
+
+section table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+section table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    background-color: #e20814;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #c30710;
+}
