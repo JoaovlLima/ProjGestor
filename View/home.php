@@ -20,7 +20,7 @@
        <h1>Home</h1>
     </div>
   </div>
-  <script src="js/script.js"></script>
+
 </body>
 
 </html>

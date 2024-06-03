@@ -7,10 +7,8 @@
     <link rel="stylesheet" href="/View/cadastro.css">
 </head>
 <body>
-    <div class="voltar">
-        <a href="index.php"><button>Voltar</button></a>
 
-    </div>
+
 <div class="cadastro-container">
         <h2>Cadastro de Patrimônio</h2>
         <form action="processa_cadastro.php" method="POST">
@@ -32,5 +30,6 @@
             <p><button type="submit">Cadastrar</button></p>
         </form>
     </div>
+   
 </body>
 </html>

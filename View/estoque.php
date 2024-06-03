@@ -15,6 +15,9 @@
     <div class="container-estoque">
     <section id="estoque">
         <h2>Estoque</h2>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Pesquisar material..." >
+        </div>
         <table>
             <thead>
                 <tr>

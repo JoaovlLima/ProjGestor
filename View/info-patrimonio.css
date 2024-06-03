@@ -1,0 +1,64 @@
+.main_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 800px;
+
+    height: 700px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+.card img {
+    width: 70%;
+    height: 60%;
+}
+.card .info {
+    padding: 20px;
+}
+.card h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+.card p {
+    color: #777;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.card .description {
+    text-align: left;
+    padding: 20px;
+}
+.card .buttons {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 0px;
+}
+.card .buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+}
+.card .buttons .edit {
+    background-color: #007bff;
+}
+.card .buttons .delete {
+    background-color: #dc3545;
+}
+.card .buttons .maintenance {
+    background-color: #28a745;
+}
+.card .buttons button:hover {
+    opacity: 0.8;
+}

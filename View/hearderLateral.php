@@ -26,9 +26,7 @@ echo <<<EOT
           Estoque Senai
         </div>
         <ul>
-          <li><a href="#">
-              <i class="fas fa-search"></i>
-            </a></li>
+         
           <li><a href="#">
               <i class="fas fa-bell"></i>
             </a></li>
@@ -68,6 +66,7 @@ echo <<<EOT
           </a></li>
       </ul>
   </div>
+  <script src="js/script.js"></script>
 EOT;
 }
 
