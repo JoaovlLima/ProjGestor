@@ -1,12 +1,12 @@
-
-
 .main_container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
     width: 80%;
-    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
 }
 
 .cadastro-estoque-container,
@@ -16,29 +16,27 @@
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
     text-align: left;
-    font-family: 'Montserrat', Roboto, sans-serif;
     color: #6b6a6a;
+    flex: 1;
+    max-width: 400px;
 }
 
 .cadastro-estoque-container {
     margin-top: 50px;
-    margin-left: 200px;
 }
 
 .linha-divisoria {
-    width: 5px;
+    width: 2px;
     background-color: #ccc;
-    height: 800px;
-    align-self: stretch; /* Makes the line span the height of its container */
+    height: auto;
+    align-self: stretch;
 }
 
 .cadastro-outros-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin-right: 200px;
     margin-top: 50px;
 }
 
@@ -50,24 +48,17 @@
     font-weight: bold;
 }
 
-.cadastro-estoque-container .form-group,
-.cadastro-material-container .form-group,
-.cadastro-fornecedor-container .form-group {
+.form-group {
     margin-bottom: 20px;
 }
 
-.cadastro-estoque-container label,
-.cadastro-material-container label,
-.cadastro-fornecedor-container label {
+label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
 }
 
-.cadastro-estoque-container select,
-.cadastro-estoque-container input,
-.cadastro-material-container input,
-.cadastro-fornecedor-container input {
+select, input {
     width: calc(100% - 20px);
     padding: 10px;
     margin: 10px 0;
@@ -75,9 +66,7 @@
     border-radius: 4px;
 }
 
-.cadastro-estoque-container button,
-.cadastro-material-container button,
-.cadastro-fornecedor-container button {
+button {
     width: 100%;
     padding: 10px;
     border: none;
@@ -89,8 +78,48 @@
     cursor: pointer;
 }
 
-.cadastro-estoque-container button:hover,
-.cadastro-material-container button:hover,
-.cadastro-fornecedor-container button:hover {
+button:hover {
     background-color: #c30710;
+}
+
+@media (max-width: 1024px) {
+    .main_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cadastro-estoque-container {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .cadastro-outros-container {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .linha-divisoria {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .cadastro-estoque-container,
+    .cadastro-material-container,
+    .cadastro-fornecedor-container {
+        padding: 10px;
+        width: calc(100% - 40px);
+        margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: calc(100% - 20px);
+        padding: 8px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
 }

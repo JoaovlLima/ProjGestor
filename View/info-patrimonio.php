@@ -29,9 +29,12 @@
     <div class="buttons">
         <div class="editExcluir">
         <button class="edit"><i class="fas fa-edit"></i> Editar</button>
-        <button class="delete"><i class="fas fa-trash"></i> Excluir</button>
+        <button class="delete"><i class="fas fa-trash"></i> Dar Baixa</button>
         </div>
-        <button class="maintenance"><i class="fas fa-tools"></i> Enviar para Manutenção</button>
+        <div class="manuTrans">
+        <button class="manutencao"><i class="fas fa-tools"></i> Enviar para Manutenção</button>
+        <button class="transferencia"><i class="fas fa-exchange-alt icon"></i> Transferência</button>
+        </div>
     </div>
 </div>
   </div>

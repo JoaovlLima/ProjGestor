@@ -1,64 +1,151 @@
-.main_container{
+.main_container {
+    
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 20px;
 }
 
 .card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 800px;
-
-    height: 700px;
+    width: 70%;
+    max-width: 800px;
     overflow: hidden;
     text-align: center;
-    position: relative;
+   
+    margin: 20px;
 }
+
 .card img {
-    width: 70%;
-    height: 60%;
+    width: 60%;
+    height: auto;
+    
+    object-fit: cover;
 }
+
 .card .info {
-    padding: 20px;
+    padding: 10px;
 }
+
 .card h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 22px;
     color: #333;
 }
+
 .card p {
     color: #777;
-    font-size: 16px;
+    font-size: 14px;
     margin: 10px 0;
 }
+
 .card .description {
     text-align: left;
-    padding: 20px;
+    padding: 10px;
 }
+
 .card .buttons {
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: space-around;
-    margin-left: 0px;
+    flex-wrap: wrap;
 }
+
 .card .buttons button {
-    padding: 10px 20px;
+    padding: 8px 16px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 14px;
     color: white;
+    margin: 5px;
 }
+
 .card .buttons .edit {
     background-color: #007bff;
 }
+
 .card .buttons .delete {
     background-color: #dc3545;
 }
-.card .buttons .maintenance {
+
+.card .buttons .manutencao {
     background-color: #28a745;
 }
+
+.card .buttons .transferencia {
+    background-color: rgb(192, 192, 9);
+}
+
 .card .buttons button:hover {
     opacity: 0.8;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1200px) {
+    .card {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        max-width: 600px;
+        margin: 10px;
+    }
+
+    .card img {
+        max-height: 250px;
+    }
+
+    .card .info,
+    .card .description,
+    .card .buttons {
+        padding: 10px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .card .buttons button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        max-width: 100%;
+        margin: 5px;
+    }
+
+    .card img {
+        max-height: 200px;
+    }
+
+    .card .info,
+    .card .description,
+    .card .buttons {
+        padding: 5px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+
+    .card .buttons button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }
