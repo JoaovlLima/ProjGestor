@@ -32,15 +32,35 @@
                 <tr>
                     <td>1</td>
                     <td>Papel A4</td>
-                    <td>200</td>
+                    <td class="celulaInput"><input type="number" value="1" min = "0"></td>
                     <td>ABC Fornecedores</td>
+                    <td class="mais"><div>+</div></td>
+                    <td class="menos"><div>-</div></td>
                 </tr>
                 <!-- Mais itens de estoque aqui -->
             </tbody>
+           
         </table>
         <button onclick="window.location.href='cadastro-estoque.php'">Adicionar Item de Estoque</button>
     </section>
     </div>
 </div>
+<script>
+    document.querySelectorAll('.mais div').forEach(button => {
+        button.addEventListener('click', function() {
+            const input = this.parentElement.parentElement.querySelector('input[type="number"]');
+            input.value = parseInt(input.value) + 1;
+        });
+    });
+
+    document.querySelectorAll('.menos div').forEach(button => {
+        button.addEventListener('click', function() {
+            const input = this.parentElement.parentElement.querySelector('input[type="number"]');
+            if (input.value > 0) {
+                input.value = parseInt(input.value) - 1;
+            }
+        });
+    });
+</script>
 </body>
 </html>

@@ -1,6 +1,7 @@
-.main_container{
- display: flex;
- justify-content: center;
+.main_container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 .container-estoque {
@@ -11,12 +12,10 @@
     width: 80%;
     max-width: 800px;
     text-align: center;
-    
 }
 
 section {
     margin-bottom: 20px;
-    
 }
 
 section h2 {
@@ -61,14 +60,58 @@ button {
 button:hover {
     background-color: #c30710;
 }
+
 .search-container {
     margin-bottom: 20px;
-  }
-  
-  .search-container input[type="text"] {
+}
+
+.search-container input[type="text"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-  }
+}
+
+table tbody tr input[type="number"] {
+    background-color: #fcf8f8;
+    border: none;
+    width: 100px;
+    text-align: center;
+   
+   
+}
+.celulaInput{
+    display: flex;
+    justify-content: center;
+}
+.mais, .menos {
+    border: none;
+}
+
+.menos div, .mais div {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.menos div {
+    background-color: #c30710;
+}
+
+.mais div {
+    background-color: rgb(1, 160, 204);
+}
+
+.menos div:hover, .mais div:hover {
+    transform: scale(1.2);
+}
+
