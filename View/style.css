@@ -24,6 +24,7 @@ body {
   display: flex;
   position: fixed;
   top: 10px;
+  z-index: 100;
 }
 
 .wrapper .top_navbar .hamburger {
@@ -219,3 +220,70 @@ body {
     margin-left: 70px;
   }
 }
+.user-profile {
+  position: relative;
+}
+
+.profile-info {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px;
+  width: 200px; 
+  height: 350px;
+  max-height: 500px; 
+  overflow-y: auto; 
+}
+
+.profile-info h3 {
+  margin-top: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.profile-info ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex; 
+  flex-direction: column;
+}
+
+.profile-info ul li {
+  margin-bottom: 10px; 
+  font-size: 14px;
+  color: #555;
+}
+
+.profile-info button {
+  background-color: #e20814;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 10px; /* Espaço adicional entre a lista de salas e o botão */
+}
+
+.profile-info button:hover {
+  background-color: #c30710;
+}
+.widget-profile{
+ display: grid;
+ position: relative;
+ height: 100%;
+ width: 100%;
+
+}
+.widget-profile button{
+  position: absolute;
+  bottom: 5px;
+}
+

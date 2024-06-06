@@ -1,3 +1,16 @@
+<?php
+include_once('../Controller/conectaDB.php');
+
+try {
+    $sql = "SELECT * FROM bloco_patrimonio";
+    $stmt = $pdo->query($sql);
+    $blocos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    echo "Erro: " . $e->getMessage();
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,35 +29,15 @@
   </div>
   
   <div class="areaCards">
-  <div class="card" onclick="window.location.href='salas.php?bloco=A'">
-      <div class="bloco">A</div>
-      <div class="info">
-        <p>Qntd de salas: 10</p>
-        <p>Numero de Patrimonios: 50</p>
+  <?php foreach ($blocos as $bloco): ?>
+      <div class="card" onclick="window.location.href='salas.php?bloco=<?= $bloco['nome_bloco'] ?>'">
+          <div class="bloco"><?= $bloco['nome_bloco'] ?></div>
+          <div class="info">
+            <p>Qntd de salas: </p>
+            <p>Numero de Patrimonios: </p>
+          </div>
       </div>
-    </div>
-   
-  <div class="card" onclick="window.location.href='salas.php?bloco=B'">
-      <div class="bloco">B</div>
-      <div class="info">
-        <p>Qntd de salas: 8</p>
-        <p>Numero de Patrimonios: 40</p>
-      </div>
-    </div>
-    <div class="card" onclick="window.location.href='salas.php?bloco=C'">
-      <div class="bloco">C</div>  
-      <div class="info">
-        <p>Qntd de salas: 12</p>
-        <p>Numero de Patrimonios: 60</p>
-      </div>
-    </div>
-    <div class="card" onclick="window.location.href='salas.php?bloco=D'">
-      <div class="bloco">D</div>
-      <div class="info">
-        <p>Qntd de salas: 7</p>
-        <p>Numero de Patrimonios: 35</p>
-      </div>
-    </div>
+    <?php endforeach; ?>
   </div>
   </div>
 </body>

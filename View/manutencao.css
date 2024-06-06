@@ -1,0 +1,112 @@
+
+.main_container {
+    padding: 20px;
+    margin-left: 250px; 
+
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: #333;
+    
+}
+
+.table_container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+button {
+    border: none;
+    padding: 10px 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button.update {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.update:hover {
+    background-color: #45a049;
+}
+
+button.concluir {
+    background-color: #008CBA;
+    color: white;
+}
+button.concluir:hover {
+    background-color: #007bb5;
+}
+
+button.Darbaixa {
+    background-color: #c2040e;
+    color: white;
+}
+button.Darbaixa:hover {
+    background-color: #c2040e;
+}
+
+
+
+button i {
+    margin-right: 5px;
+}
+.table_patrimonio{
+    margin-top: 100px;
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+.table_estoque{
+    margin-top: 150px;
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+.card h1 {
+    margin-top: 0;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    
+}

@@ -34,3 +34,26 @@ $(document).ready(function() {
       });
     });
   });
+
+  // area perfil
+
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.user-profile a').addEventListener('click', function(event) {
+        event.preventDefault();
+        var profileInfo = document.querySelector('.profile-info');
+        if (profileInfo.style.display === 'block') {
+            profileInfo.style.display = 'none';
+        } else {
+            profileInfo.style.display = 'block';
+        }
+    });
+
+    // Fechar a div se clicar fora dela
+    document.addEventListener('click', function(event) {
+        var profileInfo = document.querySelector('.profile-info');
+        var userProfile = document.querySelector('.user-profile a');
+        if (!userProfile.contains(event.target) && !profileInfo.contains(event.target)) {
+            profileInfo.style.display = 'none';
+        }
+    });
+});

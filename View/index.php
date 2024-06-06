@@ -1,3 +1,6 @@
+<?php
+include_once ('/Controller/conectaDB.php') 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +17,10 @@
   <?=template_header('GestorHeader')?>
 
     <div class="main_container">
+    <?php
+include_once ('../Controller/conectaDB.php') 
+?>
+
       <div class="item">
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut sapiente adipisci nemo atque eligendi
         reprehenderit minima blanditiis eum quae aspernatur!

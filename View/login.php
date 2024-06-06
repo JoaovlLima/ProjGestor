@@ -14,10 +14,10 @@
     <div class="login-container">
         <h2>Login</h2>
         <p>Bem vindo ao Gestor Senai-SP</p>
-        <form action="login" method="POST">
+        <form action="../Controller/processa_login.php" method="POST">
             <input type="text" id="cpf" name="cpf" placeholder="CPF" required>
             <input type="password" id="senha" name="senha" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
+        <button type="submit" name="submit">Entrar</button>
         </form>
     </div>
 

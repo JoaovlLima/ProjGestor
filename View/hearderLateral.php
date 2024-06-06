@@ -25,14 +25,43 @@ echo <<<EOT
         <div class="logo">
           Estoque Senai
         </div>
+        
         <ul>
          
           <li><a href="#">
               <i class="fas fa-bell"></i>
             </a></li>
-          <li><a href="#">
-              <i class="fas fa-user"></i>
-            </a></li>
+            <li class="user-profile">
+    <a href="#">
+        <i class="fas fa-user"></i>
+    </a>
+    <div class="profile-info">
+<div class="widget-profile">
+<div class="Areasalas">
+    <h3>Suas Salas:</h3>
+
+    <div class="block" onclick="toggleRooms(this)">
+    <h3>Bloco A</h3>
+    <ul class="rooms">
+      <li>Sala 101</li>
+      <li>Sala 102</li>
+      
+    </ul>
+  </div>
+
+  <div class="block" onclick="toggleRooms(this)">
+    <h3>Bloco B</h3>
+    <ul class="rooms">
+    
+      <li>Sala 203</li>
+    </ul>
+  </div>
+        </div>
+        <button onclick="window.location.href='logout.php'">Logout</button>
+        </div>
+    </div>
+</li>
+
         </ul>
       </div>
     </div>
@@ -51,16 +80,16 @@ echo <<<EOT
               <span class="icon"><i class="fas fa-boxes"></i></span>
               <span class="title">Estoque</span>
           </a></li>
-          <li><a href="#" class="active">
+          <li><a href="/View/manutencao.php" class="active">
           <span class="icon"><i class="fas fa-tools icon"></i></span>
           <span class="title">Manutenção</span>
       </a></li>
-          <li><a href="#" class="active">
+          <li><a href="/View/entrada.php" class="active">
               <span class="icon"><i class="fas fa-sign-in-alt"></i></span>
               <span class="title">Entrada</span>
           </a></li>
   
-          <li><a href="#">
+          <li><a href="/View/saida.php">
               <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
               <span class="title">Saída</span>
           </a></li>
