@@ -32,7 +32,6 @@ if(isset($_GET['id'])) {
     <link rel="stylesheet" href="info-patrimonio.css">
     <!-- Link para o ícone Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-   
 </head>
 <body>
     <!-- Inclui o cabeçalho lateral -->
@@ -56,16 +55,14 @@ if(isset($_GET['id'])) {
             </div>
 
             <div class="buttons">
-            <div class="editExcluir">
+                <div class="editExcluir">
                     <button class="edit"><i class="fas fa-edit"></i> Editar</button>
                     <button class="delete"><i class="fas fa-trash"></i> Dar Baixa</button>
                 </div>
                 <div class="manuTrans">
-                <button class="manutencao" onclick="openOverlay()"><i class="fas fa-tools"></i> Enviar para Manutenção</button>
-                    <button class="transferencia"><i class="fas fa-exchange-alt icon"></i> Transferência</button>
+                    <button class="manutencao" onclick="openOverlay()"><i class="fas fa-tools"></i> Enviar para Manutenção</button>
+                    <a href="transferencia-patrimonio.php?id=<?= $id_patrimonio ?>" class="transferencia"><i class="fas fa-exchange-alt icon"></i> Transferência</a>
                 </div>
-                <!-- Botão para abrir a sobreposição -->
-                
             </div>
         </div>
     </div>
