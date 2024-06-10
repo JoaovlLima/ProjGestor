@@ -1,11 +1,4 @@
-body {
-    font-family: Arial, sans-serif;
-    body {
-      background: #e1ecf2;
-    }
-    margin: 0;
-    padding: 0;
-  }
+
   
   .main_container {
     display: flex;
@@ -74,12 +67,19 @@ button:hover {
 }
 .search-container {
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  
 }
 
 .search-container input[type="text"] {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
   font-size: 16px;
+}
+.search-container button{
+margin-top: 0px;
 }

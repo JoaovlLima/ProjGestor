@@ -63,10 +63,12 @@ button:hover {
 
 .search-container {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
 }
 
 .search-container input[type="text"] {
-    width: 100%;
+    width: 80%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;

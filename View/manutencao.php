@@ -1,3 +1,13 @@
+<?php
+// Aqui você inclui o arquivo de conexão com o banco de dados
+include_once('../Controller/conectaDB.php');
+
+// Consulta SQL para selecionar os dados da tabela de manutenção
+$sql = "SELECT * FROM manutencao";
+$stmt = $pdo->query($sql);
+$manutencoes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,38 +22,35 @@
 
     <div class="main_container">
         <div class="card">
-            <h2>Patrimônios em Manutenção</h2>
+            <h2>Manutenções</h2>
             <div class="table_container">
                 <table>
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nome</th>
-                            <th>Descrição</th>
-                            <th>Data de Envio</th>
                             <th>Status</th>
+                            <th>Descrição</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>001</td>
-                            <td>Patrimônio A</td>
-                            <td>Descrição do patrimônio A</td>
-                            <td>01/06/2024</td>
-                            <td>Em Manutenção</td>
-                            <td>
-                                <button class="update"><i class="fas fa-sync-alt"></i> Atualizar</button>
-                                <button class="concluir"><i class="fas fa-check"></i> Concluir</button>
-                                <button class="Darbaixa"><i class="fas fa-trash"></i> Dar baixa</button>
-
-                            </td>
-                        </tr>
-                        <!-- Outras linhas da tabela -->
+                        <?php foreach ($manutencoes as $manutencao): ?>
+                            <tr>
+                                <td><?= htmlspecialchars($manutencao['id_manutencao']) ?></td>
+                                <td><?= htmlspecialchars($manutencao['status_manutencao']) ?></td>
+                                <td><?= htmlspecialchars($manutencao['descricao_manutencao']) ?></td>
+                                <td>
+                                    <button class="update"><i class="fas fa-sync-alt"></i> Atualizar</button>
+                                    <button class="concluir"><i class="fas fa-check"></i> Concluir</button>
+                                    <button class="darbaixa"><i class="fas fa-trash"></i> Dar baixa</button>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+    
 </body>
 </html>

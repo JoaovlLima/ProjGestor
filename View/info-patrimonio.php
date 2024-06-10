@@ -1,44 +1,109 @@
+<?php
+// Aqui você inclui o arquivo de conexão com o banco de dados
+include_once('../Controller/conectaDB.php');
+
+// Verifica se o parâmetro "id" está presente na URL
+if(isset($_GET['id'])) {
+    // Obtém o ID do patrimônio da URL
+    $id_patrimonio = $_GET['id'];
+
+    // Consulta SQL para obter as informações do patrimônio com base no ID
+    $sql = "SELECT * FROM patrimonio WHERE id_patrimonio = :id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(['id' => $id_patrimonio]);
+    $patrimonio = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Verifica se o patrimônio foi encontrado
+    if($patrimonio) {
+        // Preenche os campos HTML com as informações do patrimônio
+        $nome_patrimonio = htmlspecialchars($patrimonio['nome_patrimonio']);
+        $descricao_patrimonio = htmlspecialchars($patrimonio['descricao_patrimonio']);
+        $img_patrimonio = $patrimonio['img_patrimonio']; // Esta é a imagem em formato base64
+
+        // Agora você pode usar as variáveis $nome_patrimonio, $descricao_patrimonio e $imagem_patrimonio
+        // para preencher os campos HTML da página
+?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="info-patrimonio.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Patrimônio</title>
+    <link rel="stylesheet" href="info-patrimonio.css">
+    <!-- Link para o ícone Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   
 </head>
-
 <body>
-
-  <?php include 'hearderLateral.php' ?>
-  <?=template_header('GestorHeader')?>
-
-  
+    <!-- Inclui o cabeçalho lateral -->
+    <?php include 'hearderLateral.php'; ?>
+    <?=template_header('GestorHeader')?>
 
     <div class="main_container">
-    <div class="card">
-    <img src="data:image/jpeg;base64,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" alt="Imagem do Patrimônio">
-    <div class="info">
-        <h2>Nome do Patrimônio</h2>
-    </div>
-    <div class="description">
-        <h3>Descrição</h3>
-        <p>Esta é a descrição do patrimônio. Inclui informações detalhadas sobre o item, seu uso, condição e qualquer outra informação relevante.</p>
-    </div>
-    <div class="buttons">
-        <div class="editExcluir">
-        <button class="edit"><i class="fas fa-edit"></i> Editar</button>
-        <button class="delete"><i class="fas fa-trash"></i> Dar Baixa</button>
-        </div>
-        <div class="manuTrans">
-        <button class="manutencao"><i class="fas fa-tools"></i> Enviar para Manutenção</button>
-        <button class="transferencia"><i class="fas fa-exchange-alt icon"></i> Transferência</button>
-        </div>
-    </div>
-</div>
-  </div>
-<br>
-</body>
+        <div class="card">
+            <!-- Exibe a imagem do patrimônio -->
+          <img src="<?= "../img/".$img_patrimonio ?>" alt="Imagem do Patrimônio">
 
+            <div class="info">
+                <!-- Exibe o nome do patrimônio -->
+                <h2><?= $nome_patrimonio ?></h2>
+            </div>
+
+            <div class="description">
+                <!-- Exibe a descrição do patrimônio -->
+                <h3>Descrição</h3>
+                <p><?= $descricao_patrimonio ?></p>
+            </div>
+
+            <div class="buttons">
+            <div class="editExcluir">
+                    <button class="edit"><i class="fas fa-edit"></i> Editar</button>
+                    <button class="delete"><i class="fas fa-trash"></i> Dar Baixa</button>
+                </div>
+                <div class="manuTrans">
+                <button class="manutencao" onclick="openOverlay()"><i class="fas fa-tools"></i> Enviar para Manutenção</button>
+                    <button class="transferencia"><i class="fas fa-exchange-alt icon"></i> Transferência</button>
+                </div>
+                <!-- Botão para abrir a sobreposição -->
+                
+            </div>
+        </div>
+    </div>
+
+    <!-- Sobreposição -->
+    <div id="overlay" class="overlay">
+        <div class="overlay-content">
+            <!-- Botão para fechar a sobreposição -->
+            <span class="close-btn" onclick="closeOverlay()">&times;</span>
+            <!-- Formulário para adicionar a descrição da manutenção -->
+            <form action="../Controller/processa_cadastro_manutencao.php" method="post">
+                <input type="hidden" name="id_patrimonio" value="<?php echo $id_patrimonio; ?>">
+                <label for="descricao">Descrição da Manutenção:</label><br>
+                <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea><br>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script para controlar a visibilidade da sobreposição -->
+    <script>
+        function openOverlay() {
+            document.getElementById("overlay").style.display = "flex";
+        }
+
+        function closeOverlay() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+</body>
 </html>
+<?php
+    } else {
+        // Se o patrimônio não for encontrado, exibe uma mensagem de erro
+        echo "Patrimônio não encontrado.";
+    }
+} else {
+    // Se o parâmetro "id" não estiver presente na URL, exibe uma mensagem de erro
+    echo "ID do patrimônio não fornecido.";
+}
+?>

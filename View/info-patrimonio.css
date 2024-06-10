@@ -149,3 +149,34 @@
         padding: 6px 12px;
     }
 }
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* fundo escuro semi-transparente */
+    display: none; /* inicialmente oculto */
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* garantir que está acima de outros elementos */
+}
+
+/* Estilo para o formulário dentro da sobreposição */
+.overlay-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 400px;
+}
+
+/* Estilo para o botão de fechar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #555;
+}
