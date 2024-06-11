@@ -1,39 +1,33 @@
 <?php
-// Aqui você inclui o arquivo de conexão com o banco de dados
-include_once('../Controller/conectaDB.php');
+session_start();
+// Inclui o arquivo de conexão com o banco de dados
+include_once('conectaDB.php');
 
-// Verifica se o formulário foi submetido
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verifica se todos os campos necessários foram preenchidos
-    if (isset($_POST['id_patrimonio']) && isset($_POST['bloco']) && isset($_POST['sala'])) {
-        // Obtém os dados do formulário
-        $id_patrimonio = $_POST['id_patrimonio'];
-        $novo_bloco = $_POST['bloco'];
-        $nova_sala = $_POST['sala'];
+// Verifica se o formulário foi enviado
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Obtém os dados do formulário
+    $id_patrimonio = $_POST['id_patrimonio'];
+    $novo_bloco = $_POST['bloco'];
+    $nova_sala = $_POST['sala'];
+    $cpf = $_SESSION['cpf']; // CPF do usuário que solicitou a transferência
 
-        try {
-            // Atualiza o bloco e sala do patrimônio
-            $sql_update = "UPDATE patrimonio SET bloco_patrimonio = :novo_bloco, local_patrimonio    = :nova_sala WHERE id_patrimonio = :id_patrimonio";
-            $stmt_update = $pdo->prepare($sql_update);
-            $stmt_update->execute([
-                'novo_bloco' => $novo_bloco,
-                'nova_sala' => $nova_sala,
-                'id_patrimonio' => $id_patrimonio
-            ]);
+    // Consulta SQL para inserir a solicitação de transferência na tabela de transferências
+    $sql = "INSERT INTO transferencias (id_patrimonio, novo_bloco, nova_sala, cpf_usuario, status)
+            VALUES (:id_patrimonio, :novo_bloco, :nova_sala, :cpf_usuario, 'Pendente')";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        'id_patrimonio' => $id_patrimonio,
+        'novo_bloco' => $novo_bloco,
+        'nova_sala' => $nova_sala,
+        'cpf_usuario' => $cpf
+    ]);
 
-            // Redireciona de volta para a página de informações do patrimônio
-            header("Location: ../View/info-patrimonio.php?id=" . $id_patrimonio);
-            exit();
-        } catch (PDOException $e) {
-            // Em caso de erro, exibe uma mensagem de erro
-            echo "Erro ao transferir o patrimônio: " . $e->getMessage();
-        }
-    } else {
-        // Se algum campo estiver faltando, exibe uma mensagem de erro
-        echo "Por favor, preencha todos os campos.";
-    }
+    // Redireciona o usuário para uma página de confirmação
+    header("Location: ../View/transferencia_confirmacao.php");
+    exit();
 } else {
-    // Se o formulário não foi submetido via método POST, exibe uma mensagem de erro
-    echo "Erro: o formulário deve ser submetido via método POST.";
+    // Se o formulário não foi enviado, redireciona o usuário de volta
+    header("Location: ../View/home.php");
+    exit();
 }
 ?>

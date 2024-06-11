@@ -9,6 +9,7 @@ select * from tipo_patrimonio;
 select * from estoque;
 SELECT * from material;
 select * from fornecedor;
+select * from transferencias;
 
 
 insert into local_patrimonio
@@ -42,5 +43,19 @@ ADD FOREIGN KEY (cnpj_fornecedor) REFERENCES fornecedor(cnpj_fornecedor);
 
 UPDATE estoque SET cnpj_fornecedor = '12345678000100' WHERE id_estoque IN (13, 14);
 UPDATE estoque SET cnpj_fornecedor = '98765432000100' WHERE id_estoque IN (15, 16);
+
+CREATE TABLE transferencias (
+    id_transferencia SERIAL PRIMARY KEY,
+    id_patrimonio INT NOT NULL,
+    novo_bloco INT NOT NULL,
+    nova_sala INT NOT NULL,
+    cpf_usuario VARCHAR(11) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    FOREIGN KEY (id_patrimonio) REFERENCES patrimonio(id_patrimonio),
+    FOREIGN KEY (novo_bloco) REFERENCES bloco_patrimonio(id_bloco_patrimonio),
+    FOREIGN KEY (nova_sala) REFERENCES local_patrimonio(id_local_patrimonio),
+    FOREIGN KEY (cpf_usuario) REFERENCES usuario(cpf_usuario)
+);
+
 
 

@@ -1,3 +1,13 @@
+<?php
+if (isset($_GET['error'])) {
+    if ($_GET['error'] == 'invalid_credentials') {
+        echo "<p style='color:red;'>CPF ou Senha inválidos. Tente novamente.</p>";
+    } elseif ($_GET['error'] == 'missing_fields') {
+        echo "<p style='color:red;'>Por favor, preencha todos os campos.</p>";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
