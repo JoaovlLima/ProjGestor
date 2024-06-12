@@ -2,7 +2,13 @@
 // Aqui você inclui o arquivo de conexão com o banco de dados
 include_once('../Controller/conectaDB.php');
 
-// Verifica se o parâmetro "id" está presente na URL
+session_start();
+
+if (!isset($_SESSION['cpf'])) {
+    header('Location: login.php');
+    exit();}
+
+// Verisfica se o parâmetro "id" está presente na URL
 if(isset($_GET['id'])) {
     // Obtém o ID do patrimônio da URL
     $id_patrimonio = $_GET['id'];

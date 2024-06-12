@@ -2,6 +2,12 @@
 // Aqui você inclui o arquivo de conexão com o banco de dados
 include_once('../Controller/conectaDB.php');
 
+session_start();
+
+if (!isset($_SESSION['cpf'])) {
+    header('Location: login.php');
+    exit();}
+
 // Consulta SQL para selecionar os dados da tabela de manutenção
 $sql = "SELECT * FROM manutencao";
 $stmt = $pdo->query($sql);

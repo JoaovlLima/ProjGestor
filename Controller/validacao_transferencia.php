@@ -6,7 +6,7 @@ include_once('conectaDB.php');
 session_start();
 
 // Verifica se o usuário está logado e se tem permissão para validar transferências
-if (!isset($_SESSION['cpf'])) {
+if (!isset($_SESSION['cpf']) == "1234") {
     header("Location: login.php");
    
     exit();

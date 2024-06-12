@@ -1,5 +1,10 @@
 <?php
 include_once('../Controller/conectaDB.php');
+session_start();
+
+if (!isset($_SESSION['cpf'])) {
+    header('Location: login.php');
+    exit();}
 
 // Função para buscar materiais e fornecedores
 function fetchMaterials($pdo, $search = null) {

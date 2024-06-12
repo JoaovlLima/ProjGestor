@@ -1,6 +1,12 @@
 <?php
 include_once('../Controller/conectaDB.php');
 
+session_start();
+
+if (!isset($_SESSION['cpf'])) {
+    header('Location: login.php');
+    exit();}
+
 // Recupera o ID do bloco da URL
 $id_bloco = isset($_GET['bloco']) ? intval($_GET['bloco']) : 0;
 

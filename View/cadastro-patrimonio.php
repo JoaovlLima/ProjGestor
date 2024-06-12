@@ -1,3 +1,11 @@
+<?php 
+
+session_start();
+
+if (!isset($_SESSION['cpf'])) {
+    header('Location: login.php');
+    exit();}
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,8 +30,8 @@
         <p><label for="tipo_patrimonio">Tipo do Patrimônio:</label></p>
         <p>
             <select id="tipo_patrimonio" name="tipo_patrimonio" required>
-                <option value="3">Tipo 1</option>
-                <option value="4">Tipo 2</option>
+                <option value="1">Tipo 1</option>
+                <option value="2">Tipo 2</option>
                 <!-- Adicione outras opções conforme necessário -->
             </select>
         </p>

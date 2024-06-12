@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt->bindParam(':quantidade', $quantidade, PDO::PARAM_INT);
             $stmt->bindParam(':cnpj_fornecedor', $cnpj_fornecedor, PDO::PARAM_STR);
             $stmt->execute();
-            header("Location: ../View/cadastro-estoque.php");
+            header("Location: ../View/estoque.php");
         } catch (PDOException $e) {
             redirectWithError("Erro ao cadastrar estoque: " . $e->getMessage());
         }

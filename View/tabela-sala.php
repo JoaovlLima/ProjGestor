@@ -1,6 +1,12 @@
 <?php
 include_once('../Controller/conectaDB.php');
 
+session_start();
+
+if (!isset($_SESSION['cpf'])) {
+    header('Location: login.php');
+    exit();}
+
 // Recupera o ID da sala da URL
 $id_sala = isset($_GET['sala']) ? intval($_GET['sala']) : 0;
 

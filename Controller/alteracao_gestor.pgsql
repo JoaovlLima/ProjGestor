@@ -41,8 +41,8 @@ ALTER TABLE estoque
 ADD COLUMN cnpj_fornecedor VARCHAR(20),
 ADD FOREIGN KEY (cnpj_fornecedor) REFERENCES fornecedor(cnpj_fornecedor);
 
-UPDATE estoque SET cnpj_fornecedor = '12345678000100' WHERE id_estoque IN (13, 14);
-UPDATE estoque SET cnpj_fornecedor = '98765432000100' WHERE id_estoque IN (15, 16);
+UPDATE estoque SET cnpj_fornecedor = '12345678000100' WHERE id_estoque IN (1);
+UPDATE estoque SET cnpj_fornecedor = '98765432000100' WHERE id_estoque IN (2);
 
 CREATE TABLE transferencias (
     id_transferencia SERIAL PRIMARY KEY,
@@ -56,6 +56,12 @@ CREATE TABLE transferencias (
     FOREIGN KEY (nova_sala) REFERENCES local_patrimonio(id_local_patrimonio),
     FOREIGN KEY (cpf_usuario) REFERENCES usuario(cpf_usuario)
 );
+
+insert into usuario
+VALUES
+('Diretor','diretor@senai.com','1234','1234')
+
+
 
 
 

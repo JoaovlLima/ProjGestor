@@ -3,7 +3,7 @@
 include_once('../Controller/conectaDB.php');
 
 // Inicia a sessão
-session_start();
+
 
 // Verifica se o usuário está logado
 if (!isset($_SESSION['cpf'])) {

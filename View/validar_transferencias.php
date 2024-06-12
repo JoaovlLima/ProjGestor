@@ -2,15 +2,23 @@
 // Inclui o arquivo de conexão com o banco de dados
 include_once('../Controller/conectaDB.php');
 
-// Inicia a sessão
 session_start();
 
-// Verifica se o usuário está logado e se tem permissão para validar transferências
-if (!isset($_SESSION['cpf'])) {
+// Inicia a sessão  
+
+$cpf_usuario_logado = $_SESSION['cpf'];
+
+$sql = "SELECT email_usuario FROM usuario WHERE cpf_usuario = :cpf";
+$stmt = $pdo->prepare($sql);
+$stmt->execute(['cpf' => $cpf_usuario_logado]);
+$email_usuario_logado = $stmt->fetchColumn();
+
+// Verifica se o e-mail termina com "@adm"
+if (!$email_usuario_logado || !str_ends_with($email_usuario_logado, '@senai.com')) {
     header("Location: login.php");
     exit();
 }
-$cpf_usuario_logado = $_SESSION['cpf'];
+
 // Obtém todas as transferências pendentes
 $sql = "SELECT t.id_transferencia, t.id_patrimonio, t.novo_bloco, t.nova_sala, t.cpf_usuario, p.nome_patrimonio, b.nome_bloco_patrimonio, s.nome_local_patrimonio
         FROM transferencias t
