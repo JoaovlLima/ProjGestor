@@ -77,7 +77,7 @@ EOT;
     }
     echo <<<EOT
                             </div>
-                            <button onclick="window.location.href='logout.php'">Logout</button>
+                            <button onclick="window.location.href='../Controller/logout.php'">Logout</button>
                         </div>
                     </div>
                 </li>
