@@ -154,10 +154,10 @@ CREATE TABLE adm (
 
 CREATE TABLE estoque (
     id_estoque serial PRIMARY KEY,
-    quantidade int
-	  id_material int;
-    cnpj_fornecedor varchar(20)
-    FOREIGN KEY (id_material) REFERENCES material (id_material);
+    quantidade int,
+    id_material int
+    cnpj_fornecedor varchar(20),
+    FOREIGN KEY (id_material) REFERENCES material (id_material),
     FOREIGN KEY (cnpj_fornecedor) REFERENCES fornecedor(cnpj_fornecedor)
 );
 
@@ -189,13 +189,17 @@ CREATE TABLE sai (
     FOREIGN KEY (id_patrimonio) REFERENCES Patrimonio (id_patrimonio)
 );
 
-CREATE TABLE transferencia (
-    id_patrimonio int,
-    id_bloco_patrimonio int,
-    id_local_patrimonio int,
-    PRIMARY KEY (id_patrimonio, id_bloco_patrimonio, id_local_patrimonio),
-    FOREIGN KEY (id_bloco_patrimonio) REFERENCES bloco_patrimonio (id_bloco_patrimonio),
-    FOREIGN KEY (id_local_patrimonio) REFERENCES local_patrimonio (id_local_patrimonio)
+CREATE TABLE transferencias (
+    id_transferencia SERIAL PRIMARY KEY,
+    id_patrimonio INT NOT NULL,
+    novo_bloco INT NOT NULL,
+    nova_sala INT NOT NULL,
+    cpf_usuario VARCHAR(11) NOT NULL,
+    status VARCHAR(20) NOT NULL,
+    FOREIGN KEY (id_patrimonio) REFERENCES patrimonio(id_patrimonio),
+    FOREIGN KEY (novo_bloco) REFERENCES bloco_patrimonio(id_bloco_patrimonio),
+    FOREIGN KEY (nova_sala) REFERENCES local_patrimonio(id_local_patrimonio),
+    FOREIGN KEY (cpf_usuario) REFERENCES usuario(cpf_usuario)
 );
 
 CREATE TABLE deu_baixa (
