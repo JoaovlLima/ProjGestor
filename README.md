@@ -1,7 +1,7 @@
 <h1>Projeto Gestor Senai</h1> 
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=react&message=frontEnd&color=blue&style=for-the-badge&logo=PHP"/>
+  <img src="https://img.shields.io/static/v1?label=PHP&message=frontEnd&color=blue&style=for-the-badge&logo=PHP"/>
   <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
   <img src="http://img.shields.io/static/v1?label=TESTES&message=%3E100&color=GREEN&style=for-the-badge"/>
    <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
@@ -52,7 +52,7 @@
 
 ## Pré-requisitos
 
-:warning: [PHP](https://www.php.net/)
+:warning: [PHP](https://www.php.net/) \n
 :warning: [PostgreSQL](https://www.pgadmin.org/download/pgadmin-4-windows/)
 
 
@@ -63,9 +63,13 @@ No terminal, clone o projeto:
 ```
 git clone https://github.com/JoaovlLima/ProjGestor.git
 ```
-
+Instale o PHP na Maquina e no terminal escreva:
 ```
-Instale o PHP na Maquina e no terminal rode "php -S localhost:3000"
+php -S localhost:3000
+```
+No Navegador coloque o seguinte url:
+```
+http://localhost:3000/view/login.php
 ```
 
 ## Casos de Uso
