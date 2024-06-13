@@ -14,11 +14,15 @@ select * from transferencias;
 
 insert into local_patrimonio
 VALUES
-('Sala 23',5,22222222222,5),('Sala 25',6,11111111111,5);
+('Sala 23',5,22222222222,3),('Sala 25',6,11111111111,3);
 
 insert into bloco_patrimonio
 VALUES
-(5,'C');
+(3,'C');
+
+update bloco_patrimonio
+set nome_bloco_patrimonio = 'B'
+where id_bloco_patrimonio = 2;
 
 ALTER TABLE local_patrimonio
 ADD COLUMN id_bloco_patrimonio INT;
@@ -29,12 +33,12 @@ FOREIGN KEY(id_bloco_patrimonio)
 REFERENCES bloco_patrimonio(id_bloco_patrimonio);
 
 UPDATE local_patrimonio
-SET id_bloco_patrimonio = 3
-WHERE id_local_patrimonio = 3;
+SET id_bloco_patrimonio = 1
+WHERE id_local_patrimonio = 1;
 
 UPDATE local_patrimonio
-SET id_bloco_patrimonio = 4
-WHERE id_local_patrimonio = 4;
+SET id_bloco_patrimonio = 2
+WHERE id_local_patrimonio = 2;
 
 
 ALTER TABLE estoque

@@ -15,7 +15,7 @@ $email_usuario_logado = $stmt->fetchColumn();
 
 // Verifica se o e-mail termina com "@adm"
 if (!$email_usuario_logado || !str_ends_with($email_usuario_logado, '@senai.com')) {
-    header("Location: login.php");
+    header("Location: home.php");
     exit();
 }
 
