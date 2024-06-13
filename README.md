@@ -41,11 +41,14 @@
 
 ## Layout da Aplicação :dash:
 
-> Link do deploy da aplicação. Exemplo com netlify: https://certificates-for-everyone-womakerscode.netlify.app/
+![Captura de tela 2024-06-13 143121](https://github.com/JoaovlLima/ProjGestor/assets/82974688/316f595b-81bf-4db7-b925-969ef05adee4)
+![Captura de tela 2024-06-13 143105](https://github.com/JoaovlLima/ProjGestor/assets/82974688/60db7071-4a39-4be9-bee4-f9d68c5624ad)
+![Captura de tela 2024-06-13 143238](https://github.com/JoaovlLima/ProjGestor/assets/82974688/710bdb54-fc9c-47f9-b6ed-7ddc820cf2ac)
+![Captura de tela 2024-06-13 143223](https://github.com/JoaovlLima/ProjGestor/assets/82974688/16f77a46-56d9-48e5-a263-401713fe9dfc)
+![Captura de tela 2024-06-13 143211](https://github.com/JoaovlLima/ProjGestor/assets/82974688/710dfd24-1d97-46f5-9ecb-02daba593bfd)
+![Captura de tela 2024-06-13 143157](https://github.com/JoaovlLima/ProjGestor/assets/82974688/08aad2df-18e3-4664-8c03-cc020415868f)
+![Captura de tela 2024-06-13 143145](https://github.com/JoaovlLima/ProjGestor/assets/82974688/199614de-cc72-48ca-a61d-1bedc80b39d8)
 
-... 
-
-Se ainda não houver deploy, insira capturas de tela da aplicação ou gifs
 
 ## Pré-requisitos
 
@@ -67,9 +70,20 @@ Instale o PHP na Maquina e no terminal rode "php -S localhost:3000"
 
 ## Casos de Uso
 
-Explique com mais detalhes como a sua aplicação poderia ser utilizada. O uso de **gifs** aqui seria bem interessante. 
+Demonstração de como  ficou todas as Telas:
+![allscreens](https://github.com/JoaovlLima/ProjGestor/assets/82974688/5182a5b1-8671-4d8f-ae9a-94a0e103cdc7)
 
-Exemplo: Caso a sua aplicação tenha alguma funcionalidade de login apresente neste tópico os dados necessários para acessá-la.
+Cadastrar Patrimonio e envia para Manutenção:
+![cadastrar patrimonio e envia para manutencao](https://github.com/JoaovlLima/ProjGestor/assets/82974688/5d130643-35b6-4854-a240-cb4f2316dea5)
+
+Cadastrar Material e Fornecedor:
+![cadastro material e fornecedor](https://github.com/JoaovlLima/ProjGestor/assets/82974688/01c2e9cf-4492-46fc-b8a1-101b4b918982)
+
+Cadastrar Estoque:
+![cadastroestoque](https://github.com/JoaovlLima/ProjGestor/assets/82974688/f7419664-44bc-4e4d-a0f3-5833dbc8df52)
+
+Logout e Login:
+![logout login](https://github.com/JoaovlLima/ProjGestor/assets/82974688/24353309-b89f-4322-8bdf-70049a28d339)
 
 ## JSON :floppy_disk:
 
