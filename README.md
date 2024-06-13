@@ -1,17 +1,13 @@
-<h1>Titulo ou Arte do Projeto</h1> 
+<h1>Projeto Gestor Senai</h1> 
 
 <p align="center">
-  <img src="https://img.shields.io/static/v1?label=react&message=framework&color=blue&style=for-the-badge&logo=REACT"/>
-  <img src="https://img.shields.io/static/v1?label=Netlify&message=deploy&color=blue&style=for-the-badge&logo=netlify"/>
+  <img src="https://img.shields.io/static/v1?label=react&message=frontEnd&color=blue&style=for-the-badge&logo=PHP"/>
   <img src="http://img.shields.io/static/v1?label=License&message=MIT&color=green&style=for-the-badge"/>
-  <img src="http://img.shields.io/static/v1?label=Ruby&message=2.6.3&color=red&style=for-the-badge&logo=ruby"/>
-  <img src="http://img.shields.io/static/v1?label=Ruby%20On%20Rails%20&message=6.0.2.2&color=red&style=for-the-badge&logo=ruby"/>
   <img src="http://img.shields.io/static/v1?label=TESTES&message=%3E100&color=GREEN&style=for-the-badge"/>
    <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=RED&style=for-the-badge"/>
-   <img src="http://img.shields.io/static/v1?label=STATUS&message=CONCLUIDO&color=GREEN&style=for-the-badge"/>
 </p>
 
-> Status do Projeto: :heavy_check_mark: :warning: (concluido, em desenvolvimento, etc)
+> Status do Projeto:  :warning: Em desenvolvimento
 
 ### Tópicos 
 
@@ -25,27 +21,25 @@
 
 :small_blue_diamond: [Como rodar a aplicação](#como-rodar-a-aplicação-arrow_forward)
 
-... 
 
-Insira os tópicos do README em links para facilitar a navegação do leitor
 
 ## Descrição do projeto 
 
 <p align="justify">
-  Descrição breve do projeto compondo um paragrafo ou dois. 
+   sistema de gestão de estoque desenvolvido para gerenciar materiais e fornecedores, permitindo o cadastro de novos itens e a atualização de estoque existente. Utilizando uma interface web, os usuários podem selecionar materiais e fornecedores a partir de listas dinâmicas, preenchidas com dados recuperados do backend via API. O sistema suporta funcionalidades como o registro de novos materiais e fornecedores, além do cadastramento de quantidades de estoque para materiais específicos, todos enviados em formato JSON conforme as necessidades do backend. A estrutura do projeto inclui separação clara entre lógica de apresentação e processamento, com o uso de PHP para gerenciamento de dados e comunicação com APIs RESTful.
 </p>
 
 ## Funcionalidades
 
-:heavy_check_mark: Funcionalidade 1  
+:heavy_check_mark: Login de Funcionarios  
 
-:heavy_check_mark: Funcionalidade 2  
+:heavy_check_mark: Cadastro de Materiais
 
-:heavy_check_mark: Funcionalidade 3  
+:heavy_check_mark: Cadastro de Patrimonios e Salas
 
-:heavy_check_mark: Funcionalidade 4  
+:heavy_check_mark: Envio de Patrimonios a Manutenção
 
-## Layout ou Deploy da Aplicação :dash:
+## Layout da Aplicação :dash:
 
 > Link do deploy da aplicação. Exemplo com netlify: https://certificates-for-everyone-womakerscode.netlify.app/
 
@@ -55,30 +49,20 @@ Se ainda não houver deploy, insira capturas de tela da aplicação ou gifs
 
 ## Pré-requisitos
 
-:warning: [Node](https://nodejs.org/en/download/)
+:warning: [PHP](https://www.php.net/)
+:warning: [PostgreSQL](https://www.pgadmin.org/download/pgadmin-4-windows/)
 
-...
-
-Liste todas as dependencias e libs que o usuário deve ter instalado na máquina antes de rodar a aplicação 
 
 ## Como rodar a aplicação :arrow_forward:
 
 No terminal, clone o projeto: 
 
 ```
-git clone https://github.com/React-Bootcamp-WoMarkersCode/certificate-generator
+git clone https://github.com/JoaovlLima/ProjGestor.git
 ```
 
-... 
-
-Coloque um passo a passo para rodar a sua aplicação. **Dica: clone o próprio projeto e verfique se o passo a passo funciona**
-
-## Como rodar os testes
-
-Coloque um passo a passo para executar os testes
-
 ```
-$ npm test, rspec, etc 
+Instale o PHP na Maquina e no terminal rode "php -S localhost:3000"
 ```
 
 ## Casos de Uso
@@ -105,36 +89,26 @@ Se for necessário configurar algo antes de iniciar o banco de dados insira os c
 
 ## Linguagens, dependencias e libs utilizadas :books:
 
-- [React](https://pt-br.reactjs.org/docs/create-a-new-react-app.html)
-- [React PDF](https://react-pdf.org/)
+- [PHP](https://www.php.net/)
 
-...
-
-Liste as tecnologias utilizadas no projeto que **não** forem reconhecidas pelo Github 
-
-## Resolvendo Problemas :exclamation:
-
-Em [issues]() foram abertos alguns problemas gerados durante o desenvolvimento desse projeto e como foram resolvidos. 
 
 ## Tarefas em aberto
 
-Se for o caso, liste tarefas/funcionalidades que ainda precisam ser implementadas na sua aplicação
 
-:memo: Tarefa 1 
+:memo: Conectar a API back com o BackEnd
 
-:memo: Tarefa 2 
+:memo: Deploy do FrontEnd 
 
-:memo: Tarefa 3 
+:memo: Deploy do BackEnd
 
 ## Desenvolvedores/Contribuintes :octocat:
 
-Liste o time responsável pelo desenvolvimento do projeto
 
-| [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) |  [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) |  [<img src="https://avatars2.githubusercontent.com/u/46378210?s=400&u=071f7791bb03f8e102d835bdb9c2f0d3d24e8a34&v=4" width=115><br><sub>Diana Regina</sub>](https://github.com/Diana-ops) |
+| [<img src="https://avatars.githubusercontent.com/u/82974688?s=400&u=0bbb34283f405a86af7e82cd41b14c2375b62f22&v=4" width=115><br><sub>Matheus Silva</sub>](https://github.com/TheuZCoder) |  [<img src="https://avatars.githubusercontent.com/u/124844047?v=4" width=115><br><sub>João Lima</sub>](https://github.com/JoaovlLima) |  [<img src="https://avatars.githubusercontent.com/u/123770407?v=4" width=115><br><sub>Leticia</sub>](https://github.com/lets02) |
 | :---: | :---: | :---: 
 
 ## Licença 
 
 The [MIT License]() (MIT)
 
-Copyright :copyright: Ano - Titulo do Projeto
+Copyright :copyright: 2024 - Projeto Gestor Senai
