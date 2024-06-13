@@ -100,6 +100,7 @@ if (isset($_POST['update'])) {
                 </table>
                 <button type="submit" name="update">Atualizar Estoque</button>
             </form>
+            <br>
             <button onclick="window.location.href='cadastro-estoque.php'">Adicionar Item de Estoque</button>
         </section>
     </div>

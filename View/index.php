@@ -1,5 +1,33 @@
 <?php
-include_once ('/Controller/conectaDB.php') 
+session_start();
+
+// Inclui o arquivo de conexão com o banco de dados
+include_once('../Controller/conectaDB.php');
+
+// Pega a URI requisitada
+$request_uri = trim($_SERVER['REQUEST_URI'], '/');
+
+// Roteamento básico
+switch ($request_uri) {
+    case '':
+    case 'home':
+        include('home.php');
+        break;
+    case 'login':
+        include('login.php');
+        break;
+    case 'manutencao':
+        include('manutencao.php');
+        break;
+    case 'validar-transferencias':
+        include('validar_transferencias.php');
+        break;
+    // Adicione outros casos conforme necessário
+    default:
+        http_response_code(404);
+        echo "Página não encontrada.";
+        break;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,6 +47,8 @@ include_once ('/Controller/conectaDB.php')
     <div class="main_container">
     <?php
 include_once ('../Controller/conectaDB.php') 
+
+
 ?>
 
       <div class="item">

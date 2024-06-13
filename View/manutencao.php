@@ -12,6 +12,19 @@ if (!isset($_SESSION['cpf'])) {
 $sql = "SELECT * FROM manutencao";
 $stmt = $pdo->query($sql);
 $manutencoes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$sql ="SELECT id_patrimonio from vai_manutencao where id_manutencao = :id_manutencao";
+$stmt = $pdo->query($sql);
+$stmt->execute(['id_manutencao' => $manutencao['id_manutencao']]);
+$id_patrimonio = $stmt->fetchColumn();
+
+$sql ="SELECT nome_patrimonio from patrimonio where id_patrimonio = :id_patrimonio";
+$stmt = $pdo->query($sql);
+$stmt->execute(['id_primonio' => $id_patrimonio]);
+$nome_patrimonio = $stmt->fetchColumn();
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -36,6 +49,7 @@ $manutencoes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             <th>ID</th>
                             <th>Status</th>
                             <th>Descrição</th>
+                            <th>Nome</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
@@ -45,10 +59,14 @@ $manutencoes = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <td><?= htmlspecialchars($manutencao['id_manutencao']) ?></td>
                                 <td><?= htmlspecialchars($manutencao['status_manutencao']) ?></td>
                                 <td><?= htmlspecialchars($manutencao['descricao_manutencao']) ?></td>
+                                <td><?= $nome_patrimonio?></td>
                                 <td>
-                                    <button class="update"><i class="fas fa-sync-alt"></i> Atualizar</button>
-                                    <button class="concluir"><i class="fas fa-check"></i> Concluir</button>
-                                    <button class="darbaixa"><i class="fas fa-trash"></i> Dar baixa</button>
+                                <form action="../Controller/acoesManutencao.php" method="post">
+                                        <input type="hidden" name="id_manutencao" value="<?= $manutencao['id_manutencao'] ?>">
+                                        <button type="submit" name="acao" value="atualizar">Atualizar</button>
+                                        <button type="submit" name="acao" value="concluir">Concluir</button>
+                                        <button type="submit" name="acao" value="darbaixa">Dar Baixa</button>
+                                    </form>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

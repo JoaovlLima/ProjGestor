@@ -80,6 +80,7 @@ if(isset($_GET['id'])) {
             <!-- Formulário para adicionar a descrição da manutenção -->
             <form action="../Controller/processa_cadastro_manutencao.php" method="post">
                 <input type="hidden" name="id_patrimonio" value="<?php echo $id_patrimonio; ?>">
+                <input type="hidden" name="nome_patrimonio" value="<?php echo $nome_patrimonio; ?>">
                 <label for="descricao">Descrição da Manutenção:</label><br>
                 <textarea id="descricao" name="descricao" rows="4" cols="50" required></textarea><br>
                 <button type="submit">Enviar</button>

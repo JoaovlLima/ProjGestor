@@ -25,9 +25,9 @@ $sql = "SELECT t.id_transferencia, t.id_patrimonio, t.novo_bloco, t.nova_sala, t
         JOIN patrimonio p ON t.id_patrimonio = p.id_patrimonio
         JOIN bloco_patrimonio b ON t.novo_bloco = b.id_bloco_patrimonio
         JOIN local_patrimonio s ON t.nova_sala = s.id_local_patrimonio
-        WHERE t.status = 'Pendente' AND t.cpf_usuario = :cpf_usuario";;
+        WHERE t.status = 'Pendente'";
 $stmt = $pdo->prepare($sql);
-$stmt->execute(['cpf_usuario' => $cpf_usuario_logado]);
+$stmt->execute();
 $transferencias = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 // Função para obter o nome do bloco com base no ID

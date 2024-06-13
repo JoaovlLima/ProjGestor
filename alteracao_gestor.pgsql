@@ -14,7 +14,7 @@ select * from transferencias;
 
 insert into local_patrimonio
 VALUES
-('Sala 23',5,22222222222,3),('Sala 25',6,11111111111,3);
+('Sala 23',3,22222222222,3),('Sala 25',4,11111111111,3);
 
 insert into bloco_patrimonio
 VALUES

@@ -9,6 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Obtém os dados do formulário
         $id_patrimonio = $_POST['id_patrimonio'];
         $descricao_manutencao = $_POST['descricao'];
+        $nome_patrimonio = $_POST['nome_patrimonio'];
 
         // Define o status da manutenção
         $status_manutencao = "Em Manutenção";
