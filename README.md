@@ -27,7 +27,10 @@
 
 <p align="justify">
    sistema de gestão de estoque desenvolvido para gerenciar materiais e fornecedores, permitindo o cadastro de novos itens e a atualização de estoque existente. Utilizando uma interface web, os usuários podem selecionar materiais e fornecedores a partir de listas dinâmicas, preenchidas com dados recuperados do backend via API. O sistema suporta funcionalidades como o registro de novos materiais e fornecedores, além do cadastramento de quantidades de estoque para materiais específicos, todos enviados em formato JSON conforme as necessidades do backend. A estrutura do projeto inclui separação clara entre lógica de apresentação e processamento, com o uso de PHP para gerenciamento de dados e comunicação com APIs RESTful.
+
 </p>
+
+[Link para o BackEnd](https://github.com/TheuZCoder/ApiGerenciamentoSenai)
 
 ## Funcionalidades
 
